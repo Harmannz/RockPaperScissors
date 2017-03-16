@@ -1,11 +1,16 @@
 package rockpaperscissors;
 
+
 public class HarmanBot implements Bot {
 
     /**
-     * Next Move | Rock | Paper | Scissor Rock | Last Move Paper | Scissor |
+     *                          Next Move
+     *                    | Rock | Paper | Scissor
+     *               Rock |
+     *Last Move     Paper | 
+     *            Scissor |
      */
-
+    
     private int[][] markovChain; // 3x3 chain of moves
 
     private int lastMove, lastLastMove;
