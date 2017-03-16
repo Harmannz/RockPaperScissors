@@ -1,4 +1,7 @@
-package rockpaperscissors;
+package bot;
+
+import rockpaperscissors.Move;
+import rockpaperscissors.Result;
 
 public interface Bot {
 	
