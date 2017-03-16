@@ -13,8 +13,13 @@ import rockpaperscissors.Result;
 
 public class Game {
 	private static final int MAX_GAMES = 10000;
-
-	private void playTournament(List<Bot> bots) {
+	private List<Bot> bots;
+	
+	private Game(List<Bot> bots){
+		this.bots = new LinkedList<>(bots);
+	}
+	
+	private void playTournament() {
 		// base case
 		if (bots.size() < 2) {
 			return;
@@ -23,7 +28,7 @@ public class Game {
 				playGame(bots.get(0), bots.get(i));
 			}
 			bots.remove(0);
-			playTournament(bots);
+			playTournament();
 		}
 	}
 
@@ -63,8 +68,8 @@ public class Game {
 	}
 
 	public static void main(final String[] args) {
-		Game game = new Game();
 		List<Bot> list = new LinkedList<Bot>(Arrays.asList(new HarmanBot(), new RandomBot(), new RPSBot()));
-		game.playTournament(list);
+		Game game = new Game(list);
+		game.playTournament();
 	}
 }
