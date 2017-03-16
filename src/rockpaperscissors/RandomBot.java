@@ -2,14 +2,16 @@ package rockpaperscissors;
 
 public class RandomBot implements Bot {
 
+    private static int MAX_GAMES = 10000;
+    private int counter = 0;
+        
     @Override
     public void newGame() {
         // TODO Auto-generated method stub
 
     }
 
-    private int counter = 0;
-
+    
     @Override
     public Move nextMove() {
         // TODO Auto-generated method stub
@@ -39,7 +41,7 @@ public class RandomBot implements Bot {
         int wonByHarman = 0;
         int lossByHarman = 0;
         int drawnByHarman = 0;
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < MAX_GAMES; i++) {
             Move hbMove = hb.nextMove();
             Move rbMove = rb.nextMove();
             if (hbMove == rbMove) {
