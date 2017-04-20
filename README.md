@@ -4,7 +4,7 @@ This is a simple exercise in creating a rock paper scissor bot that would play r
 
 
 ## Running a test game
-Run *Game.java* class, in main, to play the tournament. 
+Run [*Game.java*](https://github.com/Harmannz/RockPaperScissors/blob/develop/src/main/Game.java) class, in main, to play the tournament. 
 
 You can use two basic bots for testing:
 1. RandomBot simply picks random move.
